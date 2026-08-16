@@ -123,7 +123,7 @@ apc-i-template/
 │   │   ├── ...
 │   │   └── pratica10.md
 │   └── workflows/
-│       └── validar-gcc.yml
+│       └── validar-compilacao.yml
 │
 ├── aulas/           # Códigos trabalhados em sala de aula
 │   ├── aula01/
@@ -191,13 +191,13 @@ git checkout -b pratica-01
 ### 3️⃣ Criar o arquivo da prática
 
 1. No VS Code, dentro da pasta `praticas/`, crie uma nova pasta (ex: `pratica01`).
-2. Dentro dela, crie um arquivo `.c` com o código solicitado.
+2. Dentro dela, crie os arquivos `.c` com o código solicitado e o arquivo `Makefile`.
 3. **Teste localmente** antes de enviar:
    ```bash
    cd praticas/pratica01
-   gcc ola_mundo.c -o ola_mundo
-   ./ola_mundo          # Linux/macOS
-   ola_mundo.exe        # Windows
+   make
+   ./main          # Linux/macOS
+   main.exe        # Windows
    ```
 
 ### 4️⃣ Enviar para o GitHub
@@ -233,10 +233,8 @@ git push origin pratica-01
 1. No GitHub, vá na aba **Actions** do seu repositório.
 2. Você verá um item com o nome do seu último commit.
 3. Clique nele para ver o resultado:
-   - ✅ **Verde:** Seu código compilou, passou nos testes e não tem vazamentos! A entrega é válida.
-   - ❌ **Vermelho:** Houve erro. Clique no workflow quebrado para ver detalhes. Corrija no VS Code e faça um novo `git push`.
-     - **Compilação:** warnings ou erros de sintaxe.
-     - **Testes:** saída do programa diferente do esperado.   
+   - ✅ **Verde:** Seu código compilou com sucesso! A entrega é válida.
+   - ❌ **Vermelho:** Houve erro. Clique no workflow quebrado para ver detalhes. Corrija no VS Code e envie novamente para o GitHub.
 
 ## ❓ Problemas Comuns
 
